@@ -13,6 +13,7 @@ import { MatFormFieldModule } from'@angular/material/form-field'
 import { MatSelectModule } from '@angular/material/select'
 import { MatCardModule } from '@angular/material/card'
 import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button'
 import { ListComponent } from './pages/list/list.component'
 
 @NgModule({
@@ -30,7 +31,8 @@ import { ListComponent } from './pages/list/list.component'
     MatFormFieldModule,
     MatSelectModule,
     MatCardModule,
-    MatInputModule
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
