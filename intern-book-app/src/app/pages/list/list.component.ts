@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { book } from '../../book'
 
 @Component({
   selector: 'app-list',
@@ -14,3 +15,5 @@ export class ListComponent implements OnInit {
   }
 
 }
+
+export const bookList: book[] = []
