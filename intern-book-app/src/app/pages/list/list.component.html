@@ -27,35 +27,10 @@
 </mat-card>
 
 <mat-card class="card" *ngFor="let book of bookList">
-  <mat-card-header>
-    <mat-card-title>{{ book.name }}</mat-card-title>
-  </mat-card-header>
-
+  <mat-card-title>{{ book.name }}</mat-card-title>
   <mat-card-content>
     <div>{{ book.detail }}</div>
-    <div>{{ book.evaluation }}</div>
-  </mat-card-content>
-</mat-card>
-
-<mat-card class="card">
-  <mat-card-title>アンドロイドは電気羊の夢を見るか？</mat-card-title>
-
-  <mat-card-content>
-    <div>
-      第三次大戦後の未来、サンフランシスコを舞台に賞金稼ぎのリック・デッカードが、火星から逃亡してきた8体のアンドロイドを「処理」するというあらすじ
-    </div>
-    <div>評価:90点</div>
-  </mat-card-content>
-  <mat-card-actions align="end">
-    <button mat-raised-button color="warn">削除</button>
-  </mat-card-actions>
-</mat-card>
-
-<mat-card class="card">
-  <mat-card-title>岩田さん:岩田聡はこんなことを話していた。</mat-card-title>
-  <mat-card-content>
-    <div>任天堂の元社長、岩田聡さんのことばをまとめた本</div>
-    <div>評価:90点</div>
+    <div>評価:{{ book.evaluation }}点</div>
   </mat-card-content>
   <mat-card-actions align="end">
     <button mat-raised-button color="warn">削除</button>
