@@ -34,7 +34,7 @@ import { CardComponent } from './components/card/card.component'
     MatSelectModule,
     MatCardModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
