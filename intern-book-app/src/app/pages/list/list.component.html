@@ -24,13 +24,4 @@
   </mat-card-actions>
 </mat-card>
 
-<mat-card class="card" *ngFor="let book of bookList">
-  <mat-card-title>{{ book.name }}</mat-card-title>
-  <mat-card-content>
-    <div>{{ book.detail }}</div>
-    <div>評価:{{ book.evaluation }}点</div>
-  </mat-card-content>
-  <mat-card-actions align="end">
-    <button mat-raised-button color="warn">削除</button>
-  </mat-card-actions>
-</mat-card>
+<app-card [bookList]="bookList" [buttonText]="'削除2'"></app-card>

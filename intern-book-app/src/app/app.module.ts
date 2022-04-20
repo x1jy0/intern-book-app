@@ -14,13 +14,15 @@ import { MatSelectModule } from '@angular/material/select'
 import { MatCardModule } from '@angular/material/card'
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button'
-import { ListComponent } from './pages/list/list.component'
+import { ListComponent } from './pages/list/list.component';
+import { CardComponent } from './components/card/card.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
-    ListComponent
+    ListComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,7 @@ import { ListComponent } from './pages/list/list.component'
     MatSelectModule,
     MatCardModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
