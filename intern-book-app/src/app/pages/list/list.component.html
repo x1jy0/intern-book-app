@@ -4,17 +4,27 @@
     <div class="content">
       <mat-form-field class="input" appearance="fill">
         <mat-label>書籍名</mat-label>
-        <input matInput />
+        <input matInput id="name" [(ngModel)]="book.name" placeholder="name" />
       </mat-form-field>
 
       <mat-form-field class="input" appearance="fill">
         <mat-label>あらすじ</mat-label>
-        <textarea matInput></textarea>
+        <textarea
+          matInput
+          id="detail"
+          [(ngModel)]="book.detail"
+          placeholder="detail"
+        ></textarea>
       </mat-form-field>
 
       <mat-form-field class="input" appearance="fill">
         <mat-label>評価点</mat-label>
-        <input matInput />
+        <input
+          matInput
+          id="evaluation"
+          [(ngModel)]="book.evaluation"
+          placeholder="evaluation"
+        />
       </mat-form-field>
     </div>
   </mat-card-content>
