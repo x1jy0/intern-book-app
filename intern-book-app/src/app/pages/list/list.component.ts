@@ -9,6 +9,12 @@ import { Book } from 'src/app/types/book';
 export class ListComponent implements OnInit {
   title = '読んだ本';
 
+  book: Book = {
+    name: 'name',
+    detail: 'detail',
+    evaluation: 10,
+  };
+
   bookList: Book[] = [
     {
       name: 'アンドロイドは電気羊の夢を見るか?',
