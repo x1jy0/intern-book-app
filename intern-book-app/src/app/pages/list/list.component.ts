@@ -15,6 +15,14 @@ export class ListComponent implements OnInit {
     evaluation: 10,
   };
 
+  addBook() {
+    this.bookList.push({
+      name: this.book.name,
+      detail: this.book.detail,
+      evaluation: this.book.evaluation,
+    });
+  }
+
   bookList: Book[] = [
     {
       name: 'アンドロイドは電気羊の夢を見るか?',

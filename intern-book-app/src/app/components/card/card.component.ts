@@ -1,18 +1,17 @@
-import { Component, OnInit,Input } from '@angular/core';
-import { Book } from '../../types/book'
+import { Component, OnInit, Input } from '@angular/core';
+import { Book } from '../../types/book';
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.scss']
+  styleUrls: ['./card.component.scss'],
 })
 export class CardComponent implements OnInit {
   @Input() bookList: Book[] = [];
-  @Input() buttonText: string ='';
+  @Input() buttonText: string = '';
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
-    console.log(this.bookList)
+    console.log(this.bookList);
   }
-
 }
