@@ -10,9 +10,9 @@ export class ListComponent implements OnInit {
   title = '読んだ本';
 
   book: Book = {
-    name: 'name',
-    detail: 'detail',
-    evaluation: 10,
+    name: '',
+    detail: '',
+    evaluation: 0,
   };
 
   addBook() {
