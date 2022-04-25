@@ -2,6 +2,7 @@
   <mat-card-title>書籍登録</mat-card-title>
   <mat-card-content>
     <div class="content">
+      <!--formを記述してる場所-->
       <mat-form-field class="input" appearance="fill">
         <mat-label>書籍名</mat-label>
         <input
@@ -34,8 +35,16 @@
     </div>
   </mat-card-content>
 
+  <!--formのreset付きの追加ボタン-->
   <mat-card-actions align="end">
-    <button mat-raised-button color="primary" (click)="addBook()">追加</button>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="addBook()"
+      (click)="formReset()"
+    >
+      追加
+    </button>
   </mat-card-actions>
 </mat-card>
 

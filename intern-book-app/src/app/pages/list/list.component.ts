@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from 'src/app/types/book';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-list',
@@ -14,6 +15,11 @@ export class ListComponent implements OnInit {
     detail: '',
     evaluation: 0,
   };
+
+  formReset() {
+    //各パラメータに初期値を代入
+    (this.book.name = ''), (this.book.detail = ''), (this.book.evaluation = 0);
+  }
 
   addBook() {
     this.bookList.push({
