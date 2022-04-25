@@ -4,7 +4,11 @@
     <div class="content">
       <mat-form-field class="input" appearance="fill">
         <mat-label>書籍名</mat-label>
-        <input matInput [(ngModel)]="book.name" placeholder="name" />
+        <input
+          matInput
+          [(ngModel)]="book.name"
+          placeholder="書籍名を入力してください"
+        />
       </mat-form-field>
 
       <mat-form-field class="input" appearance="fill">
@@ -12,7 +16,7 @@
         <textarea
           matInput
           [(ngModel)]="book.detail"
-          placeholder="detail"
+          placeholder="あらすじを入力してください"
         ></textarea>
       </mat-form-field>
 
@@ -24,7 +28,7 @@
           max="100"
           matInput
           [(ngModel)]="book.evaluation"
-          placeholder="evaluation"
+          placeholder="評価点を入力してください"
         />
       </mat-form-field>
     </div>
