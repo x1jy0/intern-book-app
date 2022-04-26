@@ -16,9 +16,13 @@ export class ListComponent implements OnInit {
     evaluation: 0,
   };
 
-  formReset() {
+  resetForm() {
     //各パラメータに初期値を代入
-    (this.book.name = ''), (this.book.detail = ''), (this.book.evaluation = 0);
+    this.book = {
+      name: '',
+      detail: '',
+      evaluation: 0,
+    };
   }
 
   addBook() {
@@ -27,6 +31,7 @@ export class ListComponent implements OnInit {
       detail: this.book.detail,
       evaluation: this.book.evaluation,
     });
+    this.resetForm();
   }
 
   bookList: Book[] = [
