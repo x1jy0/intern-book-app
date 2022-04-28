@@ -18,6 +18,8 @@ import { ListComponent } from './pages/list/list.component';
 import { CardComponent } from './components/card/card.component';
 import { FormsModule } from '@angular/forms';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [AppComponent, ToolbarComponent, ListComponent, CardComponent],
   imports: [
@@ -32,6 +34,7 @@ import { FormsModule } from '@angular/forms';
     MatInputModule,
     MatButtonModule,
     FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

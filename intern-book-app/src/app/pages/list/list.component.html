@@ -1,9 +1,8 @@
 <mat-card class="card">
   <mat-card-title>書籍登録</mat-card-title>
   <mat-card-content>
-    <div class="content">
-      <!--formを記述してる場所-->
-      <mat-form-field class="input" appearance="fill">
+    <!--ngModelを使う場合-->
+    <!-- <mat-form-field class="input" appearance="fill">
         <mat-label>書籍名</mat-label>
         <input
           matInput
@@ -31,13 +30,55 @@
           [(ngModel)]="book.evaluation"
           placeholder="評価点を入力してください(0点~100点)"
         />
+      </mat-form-field> -->
+    <!--ngModelを使う場合-->
+
+    <form class="content" [formGroup]="bookForm">
+      <mat-form-field class="input" appearance="fill">
+        <mat-label>書籍名</mat-label>
+        <input
+          matInput
+          formControlName="name"
+          placeholder="書籍名を入力してください"
+        />
+        <mat-error *ngIf="bookForm.controls['name'].invalid"
+          >書籍名が入力されていません</mat-error
+        >
       </mat-form-field>
-    </div>
+
+      <mat-form-field class="input" appearance="fill">
+        <mat-label>あらすじ</mat-label>
+        <textarea
+          matInput
+          formControlName="detail"
+          placeholder="あらすじを入力してください"
+        ></textarea>
+      </mat-form-field>
+
+      <mat-form-field class="input" appearance="fill">
+        <mat-label>評価点</mat-label>
+        <input
+          type="number"
+          min="0"
+          max="100"
+          matInput
+          formControlName="evaluation"
+          placeholder="評価点を入力してください(0点~100点)"
+        />
+      </mat-form-field>
+    </form>
   </mat-card-content>
 
   <!--formのreset付きの追加ボタン-->
   <mat-card-actions align="end">
-    <button mat-raised-button color="primary" (click)="addBook()">追加</button>
+    <button
+      mat-raised-button
+      [disabled]="bookForm.invalid"
+      color="primary"
+      (click)="addBook()"
+    >
+      追加
+    </button>
   </mat-card-actions>
 </mat-card>
 
