@@ -82,4 +82,8 @@
   </mat-card-actions>
 </mat-card>
 
-<app-card [bookList]="bookList" [buttonText]="'削除'"></app-card>
+<app-card
+  [bookList]="bookList"
+  [buttonText]="'削除'"
+  (removeClick)="removeBook($event)"
+></app-card>

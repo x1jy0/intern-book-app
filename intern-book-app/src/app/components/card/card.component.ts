@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Book } from '../../types/book';
 @Component({
   selector: 'app-card',
@@ -8,8 +8,14 @@ import { Book } from '../../types/book';
 export class CardComponent implements OnInit {
   @Input() bookList: Book[] = [];
   @Input() buttonText: string = '';
+  @Output() removeClick = new EventEmitter<number>(); //削除用
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  // formArr抜け殻
+  remove(i: number) {
+    this.removeClick.emit(i);
+  }
 }

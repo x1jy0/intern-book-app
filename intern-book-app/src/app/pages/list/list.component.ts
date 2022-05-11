@@ -70,4 +70,8 @@ export class ListComponent implements OnInit {
     this.bookList.push(this.bookForm.value);
     this.resetForm();
   }
+
+  removeBook(index: number) {
+    this.bookList.splice(index, 1);
+  }
 }
