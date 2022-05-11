@@ -82,6 +82,8 @@
   </mat-card-actions>
 </mat-card>
 
+<div *ngIf="!bookList.length">データがありません</div>
+
 <app-card
   [bookList]="bookList"
   [buttonText]="'削除'"
