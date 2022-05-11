@@ -14,7 +14,6 @@ export class CardComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  // formArr抜け殻
   remove(i: number) {
     this.removeClick.emit(i);
   }
