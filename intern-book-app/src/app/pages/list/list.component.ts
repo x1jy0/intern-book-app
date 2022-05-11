@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from 'src/app/types/book';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-list',
@@ -23,7 +24,50 @@ export class ListComponent implements OnInit {
     },
   ];
 
+  //ngModelを使う時の初期値
+  // book: Book = {
+  //   name: '',
+  //   detail: '',
+  //   evaluation: 0,
+  // };
+
+  bookForm = new FormGroup({
+    name: new FormControl('', [Validators.required]),
+    detail: new FormControl(''),
+    evaluation: new FormControl(0),
+  });
+
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.resetForm();
+  }
+
+  resetForm() {
+    // ngModelを使う時のリセット用の代入
+    // this.book = {
+    //   name: '',
+    //   detail: '',
+    //   evaluation: 0,
+    // };
+
+    //各パラメータに初期値を代入
+    this.bookForm.reset({
+      name: '書籍名の初期値',
+      detail: 'あらすじの初期値',
+      evaluation: 0,
+    });
+  }
+
+  addBook() {
+    //ngModelを使う時の追加処理
+    // this.bookList.push({
+    //   name: this.book.name,
+    //   detail: this.book.detail,
+    //   evaluation: this.book.evaluation,
+    // });
+
+    this.bookList.push(this.bookForm.value);
+    this.resetForm();
+  }
 }

@@ -8,22 +8,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 
-import { MatToolbarModule } from'@angular/material/toolbar'
-import { MatFormFieldModule } from'@angular/material/form-field'
-import { MatSelectModule } from '@angular/material/select'
-import { MatCardModule } from '@angular/material/card'
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button'
+import { MatButtonModule } from '@angular/material/button';
 import { ListComponent } from './pages/list/list.component';
-import { CardComponent } from './components/card/card.component'
+import { CardComponent } from './components/card/card.component';
+import { FormsModule } from '@angular/forms';
+
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ToolbarComponent,
-    ListComponent,
-    CardComponent
-  ],
+  declarations: [AppComponent, ToolbarComponent, ListComponent, CardComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -35,8 +33,10 @@ import { CardComponent } from './components/card/card.component'
     MatCardModule,
     MatInputModule,
     MatButtonModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
