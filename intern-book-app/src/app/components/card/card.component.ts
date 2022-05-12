@@ -15,6 +15,7 @@ export class CardComponent implements OnInit {
   ngOnInit(): void {}
 
   remove(i: number) {
+    //removeClickを発火させる
     this.removeClick.emit(i);
   }
 }
