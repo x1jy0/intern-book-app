@@ -74,7 +74,7 @@ export class ListComponent implements OnInit {
   }
 
   removeBook(index: number) {
-    //ダイヤログを開く
+    //ダイアログを開く
     const dialogRef = this.dialog.open(DialogComponent);
     dialogRef.afterClosed().subscribe((result) => {
       console.log(`Dialog result: ${result}`);
