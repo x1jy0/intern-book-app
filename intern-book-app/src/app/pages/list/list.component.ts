@@ -75,7 +75,9 @@ export class ListComponent implements OnInit {
 
   removeBook(index: number) {
     //ダイアログを開く
-    const dialogRef = this.dialog.open(DialogComponent);
+    const dialogRef = this.dialog.open(DialogComponent, {
+      data: { name: this.bookList[index].name }, //ダイアログにデータ（書籍名）を渡す
+    });
     dialogRef.afterClosed().subscribe((result) => {
       console.log(`Dialog result: ${result}`);
       if (result == true) {
