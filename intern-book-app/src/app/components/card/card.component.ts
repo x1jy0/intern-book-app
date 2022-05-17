@@ -16,6 +16,7 @@ export class CardComponent implements OnInit {
 
   remove(i: number) {
     //removeClickを発火させる
+    //list.componentのremoveBookにデータが渡る
     this.removeClick.emit(i);
   }
 }
