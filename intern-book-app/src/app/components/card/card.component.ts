@@ -14,8 +14,9 @@ export class CardComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  // formArr抜け殻
   remove(i: number) {
+    //removeClickを発火させる
+    //list.componentのremoveBookにデータが渡る
     this.removeClick.emit(i);
   }
 }

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from 'src/app/types/book';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogComponent } from 'src/app/components/dialog/dialog.component';
 
 @Component({
   selector: 'app-list',
@@ -37,7 +39,7 @@ export class ListComponent implements OnInit {
     evaluation: new FormControl(0),
   });
 
-  constructor() {}
+  constructor(public dialog: MatDialog) {}
 
   ngOnInit(): void {
     this.resetForm();
@@ -72,6 +74,15 @@ export class ListComponent implements OnInit {
   }
 
   removeBook(index: number) {
-    this.bookList.splice(index, 1);
+    //ダイアログを開く
+    const dialogRef = this.dialog.open(DialogComponent, {
+      data: { name: this.bookList[index].name }, //ダイアログにデータ（書籍名）を渡す
+    });
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log(`Dialog result: ${result}`);
+      if (result == true) {
+        this.bookList.splice(index, 1);
+      }
+    });
   }
 }
